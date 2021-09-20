@@ -13,7 +13,6 @@ pub fn is_unique_array(word: String) -> bool {
         let mut characters = [false; 128]; 
 
         for c in word.chars() {
-
             let index = c as u32;
 
             if characters[index as usize] {
@@ -46,6 +45,30 @@ pub fn is_unique_hashmap(word: String) -> bool {
         }
     }
     unique 
+}
+
+
+// -------------------- CHECK PERMUTATION --------------------
+// Given two strings, write a method to decide if one is a permutation of the other.
+
+pub fn check_permutation(s1: String, s2: String) -> bool {
+    let mut res: bool = true;
+
+    if s1.len() != s2.len() {
+        res = false;
+
+    } else {
+        let mut charvec = s1.chars().collect::<Vec<char>>();
+        charvec.sort();
+        let sort_s1 = charvec.into_iter().collect::<String>();
+
+        charvec = s2.chars().collect::<Vec<char>>();
+        charvec.sort();
+        let sort_s2 = charvec.into_iter().collect::<String>();
+
+        res = sort_s1.eq(&sort_s2);
+    }
+    res
 }
 
 
