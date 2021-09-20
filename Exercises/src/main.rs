@@ -5,7 +5,11 @@ fn main() {
     Exercises::arrays_strings::is_unique_array(String::from("string"));
     Exercises::arrays_strings::is_unique_hashmap(String::from("string"));
     
-    let result = Exercises::arrays_strings::check_permutation(String::from("pepe"), String::from("ppee"));
+    Exercises::arrays_strings::check_permutation(String::from("pepe"), String::from("ppee"));
+
+    let result = Exercises::arrays_strings::urlify(String::from("Mr John Smith "));
+    
+    
     println!("El resultado es: {}", result);
 
 }

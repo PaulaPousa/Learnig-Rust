@@ -72,4 +72,9 @@ pub fn check_permutation(s1: String, s2: String) -> bool {
 }
 
 
+// -------------------- URLify --------------------
+// Write a method to replace all spaces in a string with '%20'.
 
+pub fn urlify (word: String) -> String {
+    word.replace(" ", "%20")
+}
