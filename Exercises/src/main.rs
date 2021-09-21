@@ -7,8 +7,9 @@ fn main() {
     
     Exercises::arrays_strings::check_permutation(String::from("pepe"), String::from("ppee"));
 
-    let result = Exercises::arrays_strings::urlify(String::from("Mr John Smith "));
-    
+    Exercises::arrays_strings::urlify(String::from("Mr John Smith "));
+
+    let result = Exercises::arrays_strings::palindrome_permutation(String::from("Tact rCoa"));
     
     println!("El resultado es: {}", result);
 
