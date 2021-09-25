@@ -59,7 +59,6 @@ pub fn check_permutation(s1: String, s2: String) -> bool {
 
 // -------------------- URLify --------------------
 // Write a method to replace clall spaces in a string with '%20'.
-
 pub fn urlify(word: String) -> String {
     word.replace(" ", "%20")
 }
@@ -118,6 +117,27 @@ pub fn one_way(s1: String, s2: String) -> bool {
 
 
 //-------------------- STRING COMPRESSION --------------------
+// Implement a method to perform basic string compression using the counts of repeated characters. 
+// Ex: aabcccccaaa -> a2blc5a3.
+pub fn string_compression(word: String) -> String {
+
+    let mut result = String::new();
+    let mut cont = 1;
+    let mut aux = ' ';
+
+    for c in word.chars() {  
+        if aux == ' ' { aux = c;  result.push(aux);} 
+        
+        else if aux != c {
+            result += &cont.to_string();
+            aux = c; 
+            cont = 1;
+            result.push(aux);
+        
+        } else { cont = cont + 1; }
+    }
+    result + &cont.to_string()
+}
 
 
 //-------------------- ROTATE MATRIX --------------------

@@ -11,7 +11,9 @@ fn main() {
 
     Exercises::arrays_strings::palindrome_permutation(String::from("Tact rCoa"));
     
-    let result = Exercises::arrays_strings::one_way(String::from("pep1"), String::from("pepe"));
+    Exercises::arrays_strings::one_way(String::from("pep1"), String::from("pepe"));
+    
+    let result = Exercises::arrays_strings::string_compression(String::from("aabcccccaaa"));
     
     println!("El resultado es: {}", result);
 
