@@ -9,7 +9,9 @@ fn main() {
 
     Exercises::arrays_strings::urlify(String::from("Mr John Smith "));
 
-    let result = Exercises::arrays_strings::palindrome_permutation(String::from("Tact rCoa"));
+    Exercises::arrays_strings::palindrome_permutation(String::from("Tact rCoa"));
+    
+    let result = Exercises::arrays_strings::one_way(String::from("pep1"), String::from("pepe"));
     
     println!("El resultado es: {}", result);
 
