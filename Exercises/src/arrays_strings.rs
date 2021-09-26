@@ -89,10 +89,11 @@ pub fn palindrome_permutation(word: String) -> bool {
 //-------------------- ONE WAY --------------------
 // There are three types of edits that can be performed on strings: insert a character, remove a character, or replace a character. 
 // Given two strings, write a function to check if they are one edit away.
+// Implement a method to perform basic string compression using the counts of repeated characters. 
+// Ex: pepa,pepe -> true; pep,pepe -> true; pepe1,pepe -> true; pepe,pepe -> false
 pub fn one_way(s1: String, s2: String) -> bool {
-
-    if s1.eq(&s2) { return false; } // If they are the same string, none of them has been edited.
-    if i32::abs(s1.len() as i32 - s2.len() as i32) > 1 { return false; } // I check if the length of both strings is equal or only 1 longer.
+    if s1.eq(&s2) { return false; }
+    if i32::abs(s1.len() as i32 - s2.len() as i32) > 1 { return false; }
 
     let mut large = if s1.len() >= s2.len() { s1.chars().collect::<Vec<char>>() } else { s2.chars().collect::<Vec<char>>() };
     let mut small = if s1.len() < s2.len() { s1.chars().collect::<Vec<char>>() } else { s2.chars().collect::<Vec<char>>() };
@@ -118,9 +119,8 @@ pub fn one_way(s1: String, s2: String) -> bool {
 
 //-------------------- STRING COMPRESSION --------------------
 // Implement a method to perform basic string compression using the counts of repeated characters. 
-// Ex: aabcccccaaa -> a2blc5a3.
+// Ex: aabcccccaaa -> a2b1c5a3
 pub fn string_compression(word: String) -> String {
-
     let mut result = String::new();
     let mut cont = 1;
     let mut aux = ' ';
@@ -138,12 +138,3 @@ pub fn string_compression(word: String) -> String {
     }
     result + &cont.to_string()
 }
-
-
-//-------------------- ROTATE MATRIX --------------------
-
-
-//-------------------- ZERO MATRIX --------------------
-
-
-//-------------------- STRING ROTATION --------------------
