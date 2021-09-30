@@ -12,7 +12,9 @@ fn main() {
 
     // ---------- ARRAYS_STRINGS FUNCTIONS CALLS ---------- 
     let mut v: Vec<i32> = vec![5,3,1,4,2];
-    let result = Exercises::sorting_searching::bubble_sort(&mut v);
+    Exercises::sorting_searching::bubble_sort(&mut v);
+    v = vec![5,3,1,4,2];
+    let result = Exercises::sorting_searching::selection_sort(&mut v);
     
     println!("{:?}", result);
 
