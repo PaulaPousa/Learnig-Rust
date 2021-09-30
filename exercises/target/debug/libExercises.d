@@ -1,1 +1,0 @@
-/home/paula/Documentos/Rust/Learnig-Rust/Exercises/target/debug/libExercises.rlib: /home/paula/Documentos/Rust/Learnig-Rust/Exercises/src/arrays_strings.rs /home/paula/Documentos/Rust/Learnig-Rust/Exercises/src/lib.rs /home/paula/Documentos/Rust/Learnig-Rust/Exercises/src/linked_list.rs /home/paula/Documentos/Rust/Learnig-Rust/Exercises/src/sorting_searching.rs
